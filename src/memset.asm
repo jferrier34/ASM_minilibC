@@ -1,8 +1,8 @@
 section .text
 
-global	my_memset:function
+global	memset:function
 
-my_memset:
+memset:
 	push rbp ; push rbp instruction pushes the value of the register rbp onto the stack. Because it "pushes" onto the stack, now the value of rsp is the memory address of the new top of the stack
 	mov	rbp, rsp ; mov rbp, rsp copies the value of the stack pointer rsp to the base pointer rbp -> rpb and rsp now both point to the top of the stack
 	xor	rcx, rcx ; xor of registre initialise to 0

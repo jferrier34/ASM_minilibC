@@ -1,8 +1,8 @@
 section .text
 
-global	my_strlen:function
+global	strlen:function
 
-my_strlen:
+strlen:
     push rbp 
     mov rbp, rsp
     mov rax, 0

@@ -1,8 +1,8 @@
 [BITS 64]
 section .text
-global	my_rindex:function
+global	rindex:function
 
-my_rindex:
+rindex:
     push    rbp
     mov     rbp, rsp
     mov     rcx, 0
