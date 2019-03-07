@@ -18,6 +18,7 @@ find_char:
     jl      exit ; if the value is below of the second exit
     cmp     byte[rdi + rcx], bl ; compare byte to byte 
     je      found ; if equal go to find
+    dec     rcx
 found:
     add     rdi, rcx ; add rdi to rcx
     mov     rax, rdi ; change the adress of rax to rdi
