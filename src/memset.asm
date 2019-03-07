@@ -8,11 +8,11 @@ memset:
 	xor	rcx, rcx ; xor of registre initialise to 0
 
 loop:
-	cmp	rcx, rdx ;  compare if rcx == rdx
-	jz return ; go to fonction return
+	cmp	rcx, rdx ;  compare if rcx is equals to rdx
+	je return ; go to return function
 	mov	[rdi + rcx], rsi; rsi = ptr + rcx
-	inc	rcx ; rcx + 1
-	jmp	loop ;  call loop for continue le loop
+	inc	rcx ; increment the rcx + 1
+	jmp	loop ; call the loop function to release the loop
 
 return:
 	mov	rax, rdi ; returned value rdi
