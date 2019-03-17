@@ -23,7 +23,7 @@ loop:
     inc rsi
     dec rdx
     cmp rdx, 0
-    jle func_end
+    jle fun_end
     jmp loop
 
 fun_end2:

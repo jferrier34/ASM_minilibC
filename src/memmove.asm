@@ -3,8 +3,8 @@ section .text
 global memmove:function
 
 memmove:
-    push rpb ; hold the first adress of the stack
-    mov rpb, rsp ; move and deplace the adress of the last case of the stack (rsp) in rpb
+    push rbp ; hold the first adress of the stack
+    mov rbp, rsp ; move and deplace the adress of the last case of the stack (rsp) in rpb
     mov rbx, rdi ; copy of stack the value of the first arg in rdx variable
     cmp rdi, 0 ; if the first arg is null exit the program
     je end_func ; exit the program

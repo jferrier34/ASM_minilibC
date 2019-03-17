@@ -1,6 +1,6 @@
 [BITS 64]
 section .text
-global	rindex:function
+global  rindex:function
 
 rindex:
     push    rbp ; push the adress rbp on the top of the stack

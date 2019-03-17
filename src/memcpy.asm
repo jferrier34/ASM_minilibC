@@ -1,3 +1,4 @@
+[BITS 64]
 section .text
 
 global	memcpy:function
@@ -9,14 +10,14 @@ memcpy:
 
 loop:
 	cmp	rcx, rdx ; compare if rcx == rdx
-	jz	return ; go to fonction return
-	mov	al, byte [rsi + rcx] ; change the value of rax for rax = src + rcx
+	jz	return ; jump is result is inferior than 0
+	mov	al, byte [rsi + rcx] ; stock in al the contain of rsi (source or first arg of the function)
 	mov	byte [rdi + rcx], al; dest + rcx = rax
 	inc	rcx	; rcx + 1
-	jmp	loop ; call loop for continue le loop
+	jmp	loop ; do a new loop
 
 return:
 	mov	rax, rdi ; return the value of rdi
-	mov	rsp, rbp ; for leave the fonction
-	pop	rbp	; retrieves the last value pushed from the stack
+	mov	rsp, rbp ; to leave the fonction
+	pop	rbp	; replace the initit place at the begin of the stack
 	ret	; return
